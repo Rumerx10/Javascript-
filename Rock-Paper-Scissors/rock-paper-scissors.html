@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/rps.css">
+    <title>RPC Game</title>
+</head>
+<body>
+    <div class="container">
+        <p class="rps-title">Rock Paper Scissors</p>    
+        <div>
+            <button onclick="runGame('rock')" class="move-btn">
+                <img src="asset/images/rock-emoji.png" alt="" class="move-icon">
+            </button>
+            <button onclick="runGame('paper')" class="move-btn">
+                <img src="asset/images/paper-emoji.png" alt="" class="move-icon">
+            </button>
+            <button onclick="runGame('scissors')" class="move-btn">
+                <img src="asset/images/scissors-emoji.png" alt="" class="move-icon">
+            </button>
+        </div>      
+        <p class="result"></p>
+        <p class="moves"></p>
+        <p class="score"></p>
+        <div>
+            <button onclick="
+                score.wins = 0;
+                score.lose = 0;
+                score.ties = 0;
+                localStorage.removeItem('score');
+                updateScore();
+            " class="reset-btn">Reset Score</button>
+            <button class="auto-play-btn" onclick="autoPlay()">Auto Play</button>
+        </div>
+    </div>
+    
+    
+
+    <script src="asset/js/rpc.js"></script>
+</body>
+</html>
